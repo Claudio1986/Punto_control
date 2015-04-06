@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="cl.puntocontrol.hibernate.domain.SantaJuana" table="santajuana">
+    <id name="id_control" type="java.lang.String">
+        <column 							name="ID_CONTROL" />
+    </id>
+    <property name="id_control_correlativo" column="ID_CONTROL_CORRELATIVO" />
+    <property name="id_control_detalle" 	column="ID_CONTROL_DETALLE" />
+    <property name="nombre_chofer" 			column="NOMBRE_CHOFER" />
+    <property name="patente" 				column="PATENTE" />
+    <property name="fecha" 					column="FECHA" />
+    <property name="hora" 					column="HORA" />
+    <property name="rut_chofer" 			column="RUT_CHOFER" />
+    <property name="codigo_sap" 			column="CODIGO_SAP" />
+    <property name="rut_transportista" 		column="RUT_TRANSPORTISTA" />
+    <property name="nombre_transportista" 	column="NOMBRE_TRANSPORTISTA" />
+    <property name="guia_despacho" 			column="GUIA_DESPACHO" />
+    <property name="rut_chofer2" 			column="RUT_CHOFER2" />
+    <property name="rut_transportista2" 	column="RUT_TRANSPORTISTA2" />
+    <property name="nombre_control_detalle" column="NOMBRE_CONTROL_DETALLE" />
+    <property name="observacion" 			column="observacion" />
+    <property name="obs_modificacion" 		column="obs_modificacion" />
+    <property name="enviado" 				column="enviado" />
+    <property name="nombre_producto" 		column="nombre_producto" />
+    <property name="patente_carro" 			column="patente_carro" />
+    <property name="codigo_producto" 		column="codigo_producto" />
+    <property name="foto1" 					column="foto1" />
+    <property name="foto2" 					column="foto2" />
+    <property name="id_especie" 			column="id_especie" />
+    <property name="nombre_especie" 		column="nombre_especie" />
+    <property name="usuario" 				column="usuario" />
+    
+  </class>
+</hibernate-mapping>

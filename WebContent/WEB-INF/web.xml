@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+
+    <display-name>punto_control</display-name>
+    
+	<!-- action -->
+    <servlet>
+        <servlet-name>action</servlet-name>
+        <servlet-class>org.apache.struts.action.ActionServlet</servlet-class>
+        <init-param>
+            <param-name>config</param-name>
+            <param-value>
+                /WEB-INF/struts-config.xml
+            </param-value>
+       </init-param>
+       <load-on-startup>2</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>action</servlet-name>
+        <url-pattern>*.do</url-pattern>
+    </servlet-mapping>
+    
+    <!-- imageDownload -->
+  	<servlet>
+        <servlet-name>imageDownload</servlet-name>
+	  	<servlet-class>cl.puntocontrol.servlets.DownloadImageServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>imageDownload</servlet-name>
+        <url-pattern>/imageDownload</url-pattern>
+    </servlet-mapping>  
+    
+ 	<!-- welcome-file-list -->
+    <welcome-file-list>
+        <welcome-file>/html/jsp/index.jsp</welcome-file>
+    </welcome-file-list>
+    
+    <!-- image -->
+    <servlet>
+    	<servlet-name>imageServlet</servlet-name>
+    	<servlet-class>cl.puntocontrol.servlets.ImageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>imageServlet</servlet-name>
+	    <url-pattern>/imageServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- image zoom -->
+    <servlet>
+    	<servlet-name>imageZoomServlet</servlet-name>
+    	<servlet-class>cl.puntocontrol.servlets.ImageZoomServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+	    <servlet-name>imageZoomServlet</servlet-name>
+	    <url-pattern>/imageZoomServlet</url-pattern>
+	</servlet-mapping>
+	
+	<!-- pdfServlet -->
+  	<servlet>
+        <servlet-name>pdfServlet</servlet-name>
+	  	<servlet-class>cl.puntocontrol.servlets.CreatePDFServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>pdfServlet</servlet-name>
+        <url-pattern>/pdfServlet</url-pattern>
+    </servlet-mapping>  
+    <!-- pdfServletTicket -->
+  	<servlet>
+        <servlet-name>pdfServletTicket</servlet-name>
+	  	<servlet-class>cl.puntocontrol.servlets.CreatePDFServletTicket</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>pdfServletTicket</servlet-name>
+        <url-pattern>/pdfServletTicket</url-pattern>
+    </servlet-mapping>  
+    <!-- excelServlet -->
+  	<servlet>
+        <servlet-name>excelServlet</servlet-name>
+	  	<servlet-class>cl.puntocontrol.servlets.CreateExcelServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>excelServlet</servlet-name>
+        <url-pattern>/excelServlet</url-pattern>
+    </servlet-mapping> 
+    
+	<!--    jsonProductoEspecie  -->
+    <servlet>
+        <servlet-name>jsonProductoEspecie</servlet-name>
+	  	<servlet-class>cl.puntocontrol.json.JSONProductoEspecie</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jsonProductoEspecie</servlet-name>
+        <url-pattern>/jsonProductoEspecie</url-pattern>
+    </servlet-mapping>
+    
+    <!--    jsonTransportistaEstado  -->
+    <servlet>
+        <servlet-name>jsonTransportistaEstado</servlet-name>
+	  	<servlet-class>cl.puntocontrol.json.JSONTransportistaEstado</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jsonTransportistaEstado</servlet-name>
+        <url-pattern>/jsonTransportistaEstado</url-pattern>
+    </servlet-mapping> 
+    
+    <!--    jsonChoferesEstado  -->
+    <servlet>
+        <servlet-name>jsonChoferesEstado</servlet-name>
+	  	<servlet-class>cl.puntocontrol.json.JSONChoferesEstado</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jsonChoferesEstado</servlet-name>
+        <url-pattern>/jsonChoferesEstado</url-pattern>
+    </servlet-mapping>
+    
+    <!--    jsonCamionesEstado  -->
+    <servlet>
+        <servlet-name>jsonCamionesEstado</servlet-name>
+	  	<servlet-class>cl.puntocontrol.json.JSONCamionesEstado</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jsonCamionesEstado</servlet-name>
+        <url-pattern>/jsonCamionesEstado</url-pattern>
+    </servlet-mapping>
+    
+    <!--    jsonUsuarioPermisos  -->
+    <servlet>
+        <servlet-name>jsonUsuarioPermisos</servlet-name>
+	  	<servlet-class>cl.puntocontrol.json.JSONUsuarioPermisos</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jsonUsuarioPermisos</servlet-name>
+        <url-pattern>/jsonUsuarioPermisos</url-pattern>
+    </servlet-mapping>
+    
+    <!--    jsonModificarControl  -->
+    <servlet>
+        <servlet-name>jsonModificarControl</servlet-name>
+	  	<servlet-class>cl.puntocontrol.json.JSONModificarControl</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jsonModificarControl</servlet-name>
+        <url-pattern>/jsonModificarControl</url-pattern>
+    </servlet-mapping>
+    <!--    jsonSapProveedor  -->
+    <servlet>
+        <servlet-name>jsonSapProveedor</servlet-name>
+	  	<servlet-class>cl.puntocontrol.json.JSONSapProveedor</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>jsonSapProveedor</servlet-name>
+        <url-pattern>/jsonSapProveedor</url-pattern>
+    </servlet-mapping>
+    
+ 	<!-- welcome-file-list -->
+    <welcome-file-list>
+        <welcome-file>/html/jsp/index.jsp</welcome-file>
+    </welcome-file-list>
+	<listener>
+	    <description>sessionListener</description>
+	    <listener-class>
+	        cl.puntocontrol.servlets.SessionListener
+	    </listener-class>
+	</listener>
+    <session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>	
+</web-app>

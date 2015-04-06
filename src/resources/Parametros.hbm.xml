@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="cl.puntocontrol.hibernate.domain.Parametros" table="empresa">
+    <id name="rut" type="java.lang.String">
+        <column name="rut" />
+    </id>
+    <property name="direccion" column="Direccion" />
+    <property name="giro" column="giro" />
+    <property name="ciudad" column="ciudad" />
+    <property name="fono" column="fono" />
+    <property name="num_instal" column="num_instal" />
+    <property name="razon_social" column="Razon_social" />
+  </class>
+</hibernate-mapping>

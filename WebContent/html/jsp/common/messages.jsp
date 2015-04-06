@@ -1,0 +1,2 @@
+<%if(successMessage!=null && successMessage.length()>0){ %>	<div class="success"><%=successMessage %></div><%} %>
+<%if(errorMessage!=null && errorMessage.length()>0){ %>		<div class="error"><%=errorMessage %></div><%} %>

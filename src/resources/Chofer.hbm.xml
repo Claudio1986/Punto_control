@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="cl.puntocontrol.hibernate.domain.Chofer" table="chofer">
+    <id name="rut_chofer" type="java.lang.String">
+        <column 							name="rut_chofer" />
+    </id>
+    <property name="nombre_chofer" 			column="nombre_chofer" />
+    <property name="fono" 					column="fono" />
+    <property name="estado" 				column="estado" />
+    <property name="enviado" 				column="enviado" />
+    
+  </class>
+</hibernate-mapping>

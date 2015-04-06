@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="cl.puntocontrol.hibernate.domain.Transportista" table="transportista">
+    <id name="rut_transportista" type="java.lang.String">
+        <column 							name="rut_transportista" />
+    </id>
+    <property name="nombre_transportista" 	column="nombre_transportista" />
+    <property name="sap_transportista" 		column="SAP_TRANSPORTISTA" />
+    <property name="estado" 				column="estado" />
+    
+  </class>
+</hibernate-mapping>

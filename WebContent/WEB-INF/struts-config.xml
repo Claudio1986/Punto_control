@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config SYSTEM "struts-config_1_3.dtd">
+
+<struts-config>
+    <!-- ========== Form Bean Definitions ================================== -->
+    <form-beans>
+        <form-bean name="loginForm" type="cl.puntocontrol.struts.form.LoginUsuarioForm"/>
+        <form-bean name="usuariosForm" type="cl.puntocontrol.struts.form.UsuarioForm"/>
+        <form-bean name="puntoControlForm" type="cl.puntocontrol.struts.form.PuntoControlForm"/>
+        <form-bean name="productosForm" type="cl.puntocontrol.struts.form.ProductosForm"/>
+        <form-bean name="especiesForm" type="cl.puntocontrol.struts.form.EspeciesForm"/>
+        <form-bean name="transportistasForm" type="cl.puntocontrol.struts.form.TransportistasForm"/>
+        <form-bean name="choferesForm" type="cl.puntocontrol.struts.form.ChoferesForm"/>
+        <form-bean name="camionesForm" type="cl.puntocontrol.struts.form.CamionesForm"/>
+        <form-bean name="parametrosForm" type="cl.puntocontrol.struts.form.ParametrosForm"/>
+    </form-beans>
+    <!-- ========== Action Mapping Definitions ============================= -->
+    <action-mappings>
+    
+    	<!-- login -->
+        <action path="/login"
+        		name="loginForm" 
+        		type="cl.puntocontrol.struts.action.UsuarioLoginAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/login.jsp"/>
+            <forward name="error" path="/html/jsp/login.jsp"/>
+            <forward name="session" path="/html/jsp/welcome.jsp"/>
+        </action>
+        <action path="/login/submit"
+        		name="loginForm" 
+        		type="cl.puntocontrol.struts.action.UsuarioSubmitLoginAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/welcome.jsp"/>
+            <forward name="error" path="/html/jsp/login.jsp"/>
+        </action>
+        
+        <!-- usuarios -->
+         <action path="/usuarios"
+        		name="usuariosForm" 
+        		type="cl.puntocontrol.struts.action.UsuariosBuscarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/usuarios.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/usuarios.jsp"/>
+        </action>
+        <action path="/usuario/eliminar"
+        		name="usuariosForm" 
+        		type="cl.puntocontrol.struts.action.UsuarioEliminarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/usuarios.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/usuarios.jsp"/>
+        </action>
+        <action path="/usuario/guardar"
+        		name="usuariosForm" 
+        		type="cl.puntocontrol.struts.action.UsuarioGuardarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/usuarios.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/usuarios.jsp"/>
+        </action>
+        
+         <!-- productos -->
+         <action path="/productos"
+        		name="productosForm" 
+        		type="cl.puntocontrol.struts.action.ProductosBuscarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/productos.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/productos.jsp"/>
+        </action>
+        <action path="/productos/eliminar"
+        		name="productosForm" 
+        		type="cl.puntocontrol.struts.action.ProductoEliminarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/productos.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/productos.jsp"/>
+        </action>
+        <action path="/productos/guardar"
+        		name="productosForm" 
+        		type="cl.puntocontrol.struts.action.ProductoGuardarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/productos.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/productos.jsp"/>
+        </action>
+        
+        <!-- especies -->
+        <action path="/especies"
+        		name="especiesForm" 
+        		type="cl.puntocontrol.struts.action.EspeciesBuscarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/especies.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/especies.jsp"/>
+        </action>
+        <action path="/especies/eliminar"
+        		name="especiesForm" 
+        		type="cl.puntocontrol.struts.action.EspecieEliminarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/especies.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/especies.jsp"/>
+        </action>
+        <action path="/especies/guardar"
+        		name="especiesForm" 
+        		type="cl.puntocontrol.struts.action.EspecieGuardarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/especies.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/especies.jsp"/>
+        </action>
+        
+        <!-- transportistas -->
+        <action path="/transportistas"
+        		name="transportistasForm" 
+        		type="cl.puntocontrol.struts.action.TransportistasBuscarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/transportistas.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/transportistas.jsp"/>
+        </action>
+        <action path="/transportistas/eliminar"
+        		name="transportistasForm" 
+        		type="cl.puntocontrol.struts.action.TransportistaEliminarAction" 
+        		scope="session" 
+				validate="false"  
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/transportistas.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/transportistas.jsp"/>
+        </action>
+        <action path="/transportistas/guardar"
+        		name="transportistasForm" 
+        		type="cl.puntocontrol.struts.action.TransportistaGuardarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/transportistas.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/transportistas.jsp"/>
+        </action>
+        
+        <!-- choferes -->
+        <action path="/choferes"
+        		name="choferesForm" 
+        		type="cl.puntocontrol.struts.action.ChoferesBuscarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/choferes.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/choferes.jsp"/>
+        </action>
+        <action path="/choferes/eliminar"
+        		name="choferesForm" 
+        		type="cl.puntocontrol.struts.action.ChoferEliminarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/choferes.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/choferes.jsp"/>
+        </action>
+        <action path="/chofer/guardar"
+        		name="choferesForm" 
+        		type="cl.puntocontrol.struts.action.ChoferGuardarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/choferes.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/choferes.jsp"/>
+        </action>
+        
+        <!-- camiones -->
+        <action path="/camiones"
+        		name="camionesForm" 
+        		type="cl.puntocontrol.struts.action.CamionBuscarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/camiones.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/camiones.jsp"/>
+        </action>
+        <action path="/camion/eliminar"
+        		name="camionesForm" 
+        		type="cl.puntocontrol.struts.action.CamionEliminarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/camiones.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/camiones.jsp"/>
+        </action>
+        <action path="/camion/guardar"
+        		name="camionesForm" 
+        		type="cl.puntocontrol.struts.action.CamionGuardarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/camiones.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/camiones.jsp"/>
+        </action>
+        
+         <!--  PUNTO CONTROL -->
+        <action path="/puntocontrol"
+        		name="puntoControlForm" 
+        		type="cl.puntocontrol.struts.action.Punto_ControlVerAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/list/historico.jsp"/>
+            <forward name="error" path="/html/jsp/list/historico.jsp"/>
+        </action>
+        <action path="/puntocontrol/buscar"
+        		name="puntoControlForm" 
+        		type="cl.puntocontrol.struts.action.Punto_ControlBuscarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/list/historico.jsp"/>
+            <forward name="error" path="/html/jsp/list/historico.jsp"/>
+        </action>
+         <action path="/puntocontrol/mantencion"
+        		name="puntoControlForm" 
+        		type="cl.puntocontrol.struts.action.Punto_ControlMantencionVerAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/list/mantencion.jsp"/>
+            <forward name="error" path="/html/jsp/list/mantencion.jsp"/>
+        </action>
+        <action path="/puntocontrol/mantencion/buscar"
+        		name="puntoControlForm" 
+        		type="cl.puntocontrol.struts.action.Punto_ControlMantencionBuscarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/list/mantencion.jsp"/>
+            <forward name="error" path="/html/jsp/list/mantencion.jsp"/>
+        </action>
+        <action path="/puntocontrol/mantencion/eliminar"
+        		name="puntoControlForm" 
+        		type="cl.puntocontrol.struts.action.Punto_ControlMantencionEliminarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/list/mantencion.jsp"/>
+            <forward name="error" path="/html/jsp/list/mantencion.jsp"/>
+        </action>
+         <action path="/puntocontrol/modificacion"
+        		name="puntoControlForm" 
+        		type="cl.puntocontrol.struts.action.Punto_ControlModificacionVerAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/list/modificacion.jsp"/>
+            <forward name="error" path="/html/jsp/list/modificacion.jsp"/>
+        </action> 
+        <action path="/puntocontrol/modificacion/buscar"
+        		name="puntoControlForm" 
+        		type="cl.puntocontrol.struts.action.Punto_ControlModificacionBuscarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/list/modificacion.jsp"/>
+            <forward name="error" path="/html/jsp/list/modificacion.jsp"/>
+        </action>
+        <action path="/puntocontrol/modificacion/modificar"
+        		name="puntoControlForm" 
+        		type="cl.puntocontrol.struts.action.Punto_ControlModificacionModificarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/list/modificacion.jsp"/>
+            <forward name="error" path="/html/jsp/list/modificacion.jsp"/>
+        </action>
+        
+         <!--  Parametros -->
+        <action path="/parametros"
+        		name="parametrosForm" 
+        		type="cl.puntocontrol.struts.action.ParametrosVerAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/parametros.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/parametros.jsp"/>
+        </action>
+        <action path="/parametros/guardar"
+        		name="parametrosForm" 
+        		type="cl.puntocontrol.struts.action.ParametrosGuardarAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/mantenedores/parametros.jsp"/>
+            <forward name="error" path="/html/jsp/mantenedores/parametros.jsp"/>
+        </action>
+		<!--         salir -->
+        <action path="/salir"
+        		type="cl.puntocontrol.struts.action.SalirAction" 
+        		scope="session" 
+				validate="false" 
+        		>
+            <forward name="success" path="/html/jsp/index.jsp"/>
+            <forward name="error" path="/html/jsp/index.jsp"/>
+        </action>
+	</action-mappings>
+</struts-config>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+"-//Hibernate/Hibernate Configuration DTD//EN"
+"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+      <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+      <property name="hibernate.connection.url">jdbc:mysql://localhost/punto_control</property>
+      
+      <!-- Debe Agregar las credenciales del MySQL-->
+      <property name="hibernate.connection.username">root</property>
+      <property name="hibernate.connection.password">root</property>
+      
+      <property name="hibernate.connection.pool_size">10</property>
+      <property name="show_sql">false</property>
+      <property name="dialect">org.hibernate.dialect.MySQLDialect</property>
+      <property name="hibernate.hbm2ddl.auto">update</property>
+      
+	  <!-- Lista de Tablas a Mapear -->
+	  <!-- Debe Agregar todas las tablas de la Base de datos que utilizará -->
+	  <!-- además debe crear los archivos Tabla.hbm.xml -->
+	  <mapping resource="resources/Chofer.hbm.xml"/>
+	  <mapping resource="resources/Camion.hbm.xml"/>
+	  <mapping resource="resources/Especie.hbm.xml"/>
+	  <mapping resource="resources/Producto.hbm.xml"/>
+      <mapping resource="resources/Usuario.hbm.xml"/>
+      <mapping resource="resources/Transportista.hbm.xml"/>
+      <mapping resource="resources/Punto_control.hbm.xml"/>
+      <mapping resource="resources/Parametros.hbm.xml"/>
+      <mapping resource="resources/Contulmo.hbm.xml"/>
+      <mapping resource="resources/Escuadron.hbm.xml"/>
+      <mapping resource="resources/SantaJuana.hbm.xml"/>
+</session-factory>
+</hibernate-configuration> 

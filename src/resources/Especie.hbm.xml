@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="cl.puntocontrol.hibernate.domain.Especie" table="especie">
+    <id name="id_especie" type="int">
+        <column 							name="id_especie" />
+    </id>
+    <property name="nombre_especie" 	column="nombre_especie" />
+    
+  </class>
+</hibernate-mapping>

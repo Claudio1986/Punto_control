@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+  <class name="cl.puntocontrol.hibernate.domain.Usuario" table="usuario">
+    <id name="nombre" type="java.lang.String">
+        <column name="Nombre" />
+    </id>
+    <property name="clave_acceso" column="Clave_acceso" />
+
+    <property name="f1" column="f1" />
+    <property name="f2" column="f2" />
+    <property name="f3" column="f3" />
+    <property name="f4" column="f4" />
+    <property name="f5" column="f5" />
+    <property name="f6" column="f6" />
+    <property name="f7" column="f7" />
+    <property name="f8" column="f8" />
+    <property name="f9" column="f9" />
+    <property name="f10" column="f10" />
+    <property name="f11" column="f11" />
+    <property name="f12" column="f12" />
+    <property name="f13" column="f13" />
+    <property name="f14" column="f14" />
+    <property name="f15" column="f15" />
+    <property name="f16" column="f16" />
+    <property name="f17" column="f17" />
+    <property name="f18" column="f18" />
+    <property name="f19" column="f19" />
+    <property name="f20" column="f20" />
+  </class>
+</hibernate-mapping>
